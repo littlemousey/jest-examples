@@ -55,3 +55,12 @@ export class Person {
     return this.name;
   }
 }
+
+export const APICall = number =>
+  new Promise(function(resolve, reject) {
+    if (number % 2 === 0) {
+      resolve("even");
+    } else {
+      reject("odd");
+    }
+  });
